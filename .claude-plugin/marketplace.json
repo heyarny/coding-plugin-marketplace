@@ -1,0 +1,15 @@
+{
+  "name": "coding-plugins-marketplace",
+  "owner": {
+    "name": "Arnold"
+  },
+  "metadata": {
+    "description": "Reusable coding workflows for Codex and Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "repo-inspector",
+      "source": "./plugins/repo-inspector"
+    }
+  ]
+}

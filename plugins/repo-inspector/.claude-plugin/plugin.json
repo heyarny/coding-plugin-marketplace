@@ -1,0 +1,10 @@
+{
+  "name": "repo-inspector",
+  "version": "0.1.0",
+  "description": "Map a repository and identify the files and checks relevant to a change.",
+  "author": {
+    "name": "Arnold"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "repository", "onboarding"]
+}
