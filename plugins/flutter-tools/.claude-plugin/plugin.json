@@ -1,0 +1,10 @@
+{
+  "name": "flutter-tools",
+  "version": "1.0.0",
+  "description": "Inspect and test running Flutter apps with Dart/Flutter MCP, and diagnose motion glitches using iOS Simulator recordings and frame analysis.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "flutter", "testing", "mcp", "motion-debugging"]
+}

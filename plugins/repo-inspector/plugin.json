@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "repo-inspector",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Map a repository and identify the files and checks relevant to a change.",
   "author": {
     "name": "Arnold"
@@ -15,7 +15,7 @@
         "shortDescription": "Map a repository before making changes",
         "longDescription": "Inspect repository instructions, entry points, and validation commands, then produce a concise map with file references.",
         "developerName": "Arnold",
-        "category": "Productivity",
+        "category": "Developer Tools",
         "defaultPrompt": [
           "Use Repo Inspector to map this repository."
         ]

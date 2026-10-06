@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coordinate-codex-agents",
+  "version": "1.0.0",
+  "description": "Coordinate Codex app tasks across saved local and remote projects using host-provided Codex app task-management tools.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "codex", "agents", "tasks", "coordination"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Coordinate Codex Agents",
+        "shortDescription": "Coordinate Codex app tasks",
+        "longDescription": "Find, inspect, create, message, and open Codex app tasks across saved projects. Confirm the communication target before starting an outbound exchange and use each delegated project's agent as its exclusive implementation interface. Requires host-provided Codex app task-management APIs.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Coordinate Codex Agents to find the chats for my saved backend project.",
+          "Use Coordinate Codex Agents to ask another project's agent a question after I choose its chat."
+        ]
+      }
+    }
+  }
+}

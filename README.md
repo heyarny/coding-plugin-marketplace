@@ -5,6 +5,10 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 
 | Plugin | Workflow | Dependencies |
 | --- | --- | --- |
+| [Review and Track Findings](plugins/review-and-track-findings/README.md) | Review changes and track findings through repair and verification | Host Git, file, and validation tools; subagents for parallel reviews |
+| [Git Commit](plugins/git-commit/README.md) | Draft Conventional Commit messages or commit staged changes | Host Git and shell tools |
+| [Flutter Tools](plugins/flutter-tools/README.md) | Inspect running Flutter apps and diagnose motion with two bundled skills | Dart/Flutter MCP; native UI tools; macOS Simulator and ffmpeg for motion capture |
+| [Coordinate Codex Agents](plugins/coordinate-codex-agents/README.md) | Coordinate Codex app chats across saved projects | Host-provided Codex app task-management APIs |
 | [Repo Inspector](plugins/repo-inspector/README.md) | Map repository structure, entry points, and validation commands | Host file and shell tools |
 
 ## Try locally

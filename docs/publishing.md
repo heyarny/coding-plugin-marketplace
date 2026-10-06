@@ -56,9 +56,9 @@ Bump both manifests for every shipped change to a plugin. Test installations
 from the repository, then tag the reviewed commit. For the starter plugin:
 
 ```sh
-git tag -a repo-inspector-v0.1.0 -m "Release Repo Inspector 0.1.0"
-git push origin repo-inspector-v0.1.0
-gh release create repo-inspector-v0.1.0 --title "Repo Inspector 0.1.0" --generate-notes
+git tag -a repo-inspector-v1.0.0 -m "Release Repo Inspector 1.0.0"
+git push origin repo-inspector-v1.0.0
+gh release create repo-inspector-v1.0.0 --title "Repo Inspector 1.0.0" --generate-notes
 ```
 
 Tags preserve release history; installations from the default branch follow its

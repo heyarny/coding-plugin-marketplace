@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review and Track Findings"
+  short_description: "Review changes and manage living findings"
+  default_prompt: "Use $review-and-track-findings to review my current changes and manage the findings in a living project-root document."

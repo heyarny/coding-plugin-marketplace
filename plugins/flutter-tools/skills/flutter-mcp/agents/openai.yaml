@@ -1,0 +1,3 @@
+interface:
+  display_name: "Flutter MCP"
+  short_description: "Drive Flutter UI and handle native picker handoffs"

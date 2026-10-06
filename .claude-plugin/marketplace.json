@@ -8,6 +8,22 @@
   },
   "plugins": [
     {
+      "name": "review-and-track-findings",
+      "source": "./plugins/review-and-track-findings"
+    },
+    {
+      "name": "git-commit",
+      "source": "./plugins/git-commit"
+    },
+    {
+      "name": "flutter-tools",
+      "source": "./plugins/flutter-tools"
+    },
+    {
+      "name": "coordinate-codex-agents",
+      "source": "./plugins/coordinate-codex-agents"
+    },
+    {
       "name": "repo-inspector",
       "source": "./plugins/repo-inspector"
     }

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "review-and-track-findings",
+  "version": "1.0.0",
+  "description": "Review code changes and track actionable findings through discussion, repair, and verification in a living repository document.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "code-review", "findings", "verification"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Review and Track Findings",
+        "shortDescription": "Review changes and track findings to resolution",
+        "longDescription": "Review staged, unstaged, and untracked changes, then maintain stable finding IDs, evidence, priorities, decisions, fixes, and verification in code_review_issues.md. Explain findings or fix them when requested, and retain the document until explicit closure.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Review and Track Findings to review my current changes and record actionable findings in code_review_issues.md.",
+          "Use Review and Track Findings to explain CR-002 and recommend whether to fix it."
+        ]
+      }
+    }
+  }
+}

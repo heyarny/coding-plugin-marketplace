@@ -9,7 +9,7 @@ cp -R plugins/repo-inspector plugins/my-plugin
 1. Update `name`, `version`, `description`, `author`, `license`, and `keywords`
    in `plugin.json` and `.claude-plugin/plugin.json`. Keep those fields identical.
    Use a lowercase kebab-case name matching the directory and a version such as
-   `0.1.0`. This starter validator accepts stable `MAJOR.MINOR.PATCH` versions.
+   `1.0.0`. This starter validator accepts stable `MAJOR.MINOR.PATCH` versions.
 2. Update `extensions.com.openai.interface` in the portable manifest for the
    Codex listing. Describe the actual workflow and supply useful default prompts.
 3. Replace `skills/repo-map/` with your skills. Each skill belongs in

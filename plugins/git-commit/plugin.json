@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "git-commit",
+  "version": "1.0.0",
+  "description": "Draft concise Conventional Commit messages from staged changes, or commit the staged change set when invoked without draft mode.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "git", "commits", "conventional-commits"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Git Commit",
+        "shortDescription": "Draft messages or commit staged changes",
+        "longDescription": "Inspect only the current Git index, choose a concise Conventional Commit message, and commit on the current branch. Include draft for a message preview. Mixed unrelated changes require a decision before splitting or committing; index changes for a split require approval, and the skill does not push.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Git Commit draft to propose a Conventional Commit message for my staged changes.",
+          "Use Git Commit to commit my staged changes on the current branch."
+        ]
+      }
+    }
+  }
+}

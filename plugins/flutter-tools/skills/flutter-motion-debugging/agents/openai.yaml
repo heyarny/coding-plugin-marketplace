@@ -1,0 +1,3 @@
+interface:
+  display_name: "Flutter Motion Debugging"
+  short_description: "Trace Flutter UI jumps with simulator video and ffmpeg"

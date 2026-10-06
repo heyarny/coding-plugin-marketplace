@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "flutter-tools",
+  "version": "1.0.0",
+  "description": "Inspect and test running Flutter apps with Dart/Flutter MCP, and diagnose motion glitches using iOS Simulator recordings and frame analysis.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["coding", "flutter", "testing", "mcp", "motion-debugging"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Flutter Tools",
+        "shortDescription": "Inspect Flutter apps and diagnose UI motion",
+        "longDescription": "Bundle Flutter MCP and Flutter Motion Debugging: connect to a running app, inspect widgets, verify interactions, and capture timed simulator frames for scroll and animation diagnosis. Requires host-provided Dart/Flutter MCP tools; simulator motion capture also requires macOS, Xcode Simulator, and ffmpeg.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Flutter MCP from Flutter Tools to inspect and test my running Flutter app.",
+          "Use Flutter Motion Debugging from Flutter Tools to diagnose a scroll jump in my iOS Simulator app."
+        ]
+      }
+    }
+  }
+}

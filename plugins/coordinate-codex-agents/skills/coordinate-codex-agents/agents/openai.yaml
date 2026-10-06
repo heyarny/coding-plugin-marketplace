@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coordinate Codex Agents"
+  short_description: "Coordinate agents across Codex projects"
+  default_prompt: "Use $coordinate-codex-agents to coordinate with an agent in another Codex project."
