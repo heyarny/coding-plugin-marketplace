@@ -32,7 +32,8 @@ class MarketplaceValidationTests(unittest.TestCase):
         self.write_json(CLAUDE_CATALOG, {
             "name": "test-marketplace",
             "owner": {"name": "Test Publisher"},
-            "plugins": [{"name": "repo-inspector", "source": f"./{PLUGIN}"}],
+            "plugins": [{"name": "repo-inspector", "source": f"./{PLUGIN}",
+                         "category": "Productivity"}],
         })
         identity = {
             "name": "repo-inspector", "version": "0.1.0",
@@ -123,6 +124,21 @@ class MarketplaceValidationTests(unittest.TestCase):
         self.edit_json(CLAUDE_CATALOG, lambda value: value.update(name="other-marketplace"))
         with self.assertRaisesRegex(ValueError, "marketplace names differ"):
             validate_marketplace(self.root)
+
+    def test_catalog_category_drift_is_rejected(self):
+        self.edit_json(CLAUDE_CATALOG, lambda value: value["plugins"][0].update(category="Developer Tools"))
+        with self.assertRaisesRegex(ValueError, "catalog categories differ"):
+            validate_marketplace(self.root)
+
+    def test_missing_catalog_category_is_rejected(self):
+        for catalog in (CODEX_CATALOG, CLAUDE_CATALOG):
+            with self.subTest(catalog=catalog):
+                path = self.root / catalog
+                original = path.read_text()
+                self.edit_json(catalog, lambda value: value["plugins"][0].pop("category"))
+                with self.assertRaisesRegex(ValueError, "missing or empty category"):
+                    validate_marketplace(self.root)
+                path.write_text(original)
 
     def test_manifest_version_drift_is_rejected(self):
         self.edit_json(CLAUDE_MANIFEST, lambda value: value.update(version="0.2.0"))

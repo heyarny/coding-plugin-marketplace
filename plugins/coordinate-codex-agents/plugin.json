@@ -1,13 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "coordinate-codex-agents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Coordinate Codex app tasks across saved local and remote projects using host-provided Codex app task-management tools.",
   "author": {
     "name": "Arnold Stark"
   },
   "license": "MIT",
-  "keywords": ["coding", "codex", "agents", "tasks", "coordination"],
+  "keywords": ["codex", "agents", "agent-coordination", "tasks", "orchestration"],
   "extensions": {
     "com.openai": {
       "interface": {

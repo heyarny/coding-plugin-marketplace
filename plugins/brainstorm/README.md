@@ -4,7 +4,7 @@ A thinking partner for exploring ideas, comparing alternatives, and refining a
 direction through conversation. Applies across topics, from a small personal
 decision to an organizational, creative, or technical question.
 
-Version **1.0.0**. Category: **Developer Tools**. Author: **Arnold Stark**.
+Version **1.0.1**. Category: **Productivity**. Author: **Arnold Stark**.
 
 ## Install
 

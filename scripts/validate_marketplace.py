@@ -77,7 +77,7 @@ def catalog_entries(catalog, root, client):
             require(policy.get("installation") == "AVAILABLE", f"{name}: installation must be AVAILABLE")
             require(policy.get("authentication") in ("ON_INSTALL", "ON_USE"),
                     f"{name}: invalid authentication policy")
-            text_field(entry, "category", name)
+        text_field(entry, "category", name)
         local_directory(root, source)
         require(source == f"./plugins/{name}", f"{name}: source must be ./plugins/{name}")
         indexed[name] = source
@@ -165,7 +165,9 @@ def validate_marketplace(root):
             "catalog plugin names, order, or sources differ between clients")
     directories = {path.name for path in (root / "plugins").iterdir() if path.is_dir()}
     require(directories == set(codex_entries), "plugins directory and catalog entries differ")
-    for entry in codex["plugins"]:
+    for entry, claude_entry in zip(codex["plugins"], claude["plugins"]):
+        require(entry["category"] == claude_entry["category"],
+                f"{entry['name']}: catalog categories differ between clients")
         validate_plugin(root / entry["source"]["path"], entry["name"], entry["category"])
     return len(codex_entries)
 

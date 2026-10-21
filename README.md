@@ -3,16 +3,20 @@
 A Git-based marketplace of reusable coding plugins for **Codex** and **Claude
 Code**. Plugin content is shared; each client gets its own catalog and manifest.
 
-| Plugin | Workflow | Dependencies |
-| --- | --- | --- |
-| [Review and Track Findings](plugins/review-and-track-findings/README.md) | Review changes and track findings through repair and verification | Host Git, file, and validation tools; subagents for parallel reviews |
-| [Git Commit](plugins/git-commit/README.md) | Draft Conventional Commit messages or commit staged changes | Host Git and shell tools |
-| [Flutter Tools](plugins/flutter-tools/README.md) | Inspect running Flutter apps and diagnose motion with two bundled skills | Dart/Flutter MCP; native UI tools; macOS Simulator and ffmpeg for motion capture |
-| [Coordinate Codex Agents](plugins/coordinate-codex-agents/README.md) | Coordinate Codex app chats across saved projects | Host-provided Codex app task-management APIs |
-| [Ponytail](plugins/ponytail/README.md) | Simplify code, review and audit complexity, and track deliberate shortcuts with eight bundled skills | Host file, shell, Git, and project validation tools |
-| [Repo Inspector](plugins/repo-inspector/README.md) | Map repository structure, entry points, and validation commands | Host file and shell tools |
-| [Mermaid](plugins/mermaid/README.md) | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
-| [Brainstorm](plugins/brainstorm/README.md) | Explore ideas, compare alternatives, and refine a direction through conversation | Conversation; optional file, web search, and local subagent tools |
+| Plugin | Category | Workflow | Dependencies |
+| --- | --- | --- | --- |
+| [Review and Track Findings](plugins/review-and-track-findings/README.md) | Developer Tools | Review changes and track findings through repair and verification | Host Git, file, and validation tools; subagents for parallel reviews |
+| [Git Commit](plugins/git-commit/README.md) | Developer Tools | Draft Conventional Commit messages or commit staged changes | Host Git and shell tools |
+| [Flutter Tools](plugins/flutter-tools/README.md) | Developer Tools | Inspect running Flutter apps and diagnose motion with two bundled skills | Dart/Flutter MCP; native UI tools; macOS Simulator and ffmpeg for motion capture |
+| [Coordinate Codex Agents](plugins/coordinate-codex-agents/README.md) | Developer Tools | Coordinate Codex app chats across saved projects | Host-provided Codex app task-management APIs |
+| [Ponytail](plugins/ponytail/README.md) | Developer Tools | Simplify code, review and audit complexity, and track deliberate shortcuts with eight bundled skills | Host file, shell, Git, and project validation tools |
+| [Repo Inspector](plugins/repo-inspector/README.md) | Developer Tools | Map repository structure, entry points, and validation commands | Host file and shell tools |
+| [Mermaid](plugins/mermaid/README.md) | Productivity | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
+| [Brainstorm](plugins/brainstorm/README.md) | Productivity | Explore ideas, compare alternatives, and refine a direction through conversation | Conversation; optional file, web search, and local subagent tools |
+
+Categories describe the broad purpose of each plugin and match in both catalogs.
+Manifest keywords identify specific workflows, such as code review, refactoring,
+Git commits, Flutter debugging, agent coordination, planning, and documentation.
 
 ## Install and use
 

@@ -13,6 +13,9 @@ cp -R plugins/repo-inspector plugins/my-plugin
    `1.0.0`. This starter validator accepts stable `MAJOR.MINOR.PATCH` versions.
 2. Update `extensions.com.openai.interface` in the portable manifest for the
    Codex listing. Describe the actual workflow and supply useful default prompts.
+   Choose a broad [supported category](https://developers.openai.com/plugins/deploy/submission-errors#listing-and-interface-errors),
+   such as `Developer Tools` for coding workflows or `Productivity` for planning
+   and documentation. Use specific workflow keywords in both plugin manifests.
 3. Replace `skills/repo-map/` with your skills. Each skill belongs in
    `skills/<skill-name>/SKILL.md` and starts with YAML frontmatter containing
    `name` and `description`. Use an unquoted name and a single-line description,
@@ -24,7 +27,8 @@ cp -R plugins/repo-inspector plugins/my-plugin
 5. Add the plugin to both catalogs with source `./plugins/my-plugin`. In the
    Codex catalog, use the local source object and an `AVAILABLE` installation
    policy. Copy its authentication policy for skills-only plugins; it causes no
-   login without a service connection. Keep catalog ordering aligned.
+   login without a service connection. Set the same `category` in both catalogs,
+   matching the portable manifest's listing category. Keep catalog ordering aligned.
 6. Run the repository checks. Where Claude Code is installed, also run
    `claude plugin validate .` and `claude plugin validate ./plugins/my-plugin`.
    Install and exercise the workflow in both clients before publishing.

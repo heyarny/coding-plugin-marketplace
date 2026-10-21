@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2026-10-21
+
+- Refine workflow keywords for more specific discovery.
+
 ## [1.1.0] - 2026-10-21
 
 - Show prominent warnings for confirmed or potential breaking changes, with staged

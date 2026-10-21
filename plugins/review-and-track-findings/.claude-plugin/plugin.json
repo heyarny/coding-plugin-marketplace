@@ -1,10 +1,10 @@
 {
   "name": "review-and-track-findings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Review code changes and track actionable findings through discussion, repair, and verification in a living repository document.",
   "author": {
     "name": "Arnold Stark"
   },
   "license": "MIT",
-  "keywords": ["coding", "code-review", "findings", "verification"]
+  "keywords": ["code-review", "code-quality", "findings", "issue-tracking", "verification"]
 }

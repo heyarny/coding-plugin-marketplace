@@ -9,35 +9,43 @@
   "plugins": [
     {
       "name": "review-and-track-findings",
-      "source": "./plugins/review-and-track-findings"
+      "source": "./plugins/review-and-track-findings",
+      "category": "Developer Tools"
     },
     {
       "name": "git-commit",
-      "source": "./plugins/git-commit"
+      "source": "./plugins/git-commit",
+      "category": "Developer Tools"
     },
     {
       "name": "flutter-tools",
-      "source": "./plugins/flutter-tools"
+      "source": "./plugins/flutter-tools",
+      "category": "Developer Tools"
     },
     {
       "name": "coordinate-codex-agents",
-      "source": "./plugins/coordinate-codex-agents"
+      "source": "./plugins/coordinate-codex-agents",
+      "category": "Developer Tools"
     },
     {
       "name": "ponytail",
-      "source": "./plugins/ponytail"
+      "source": "./plugins/ponytail",
+      "category": "Developer Tools"
     },
     {
       "name": "repo-inspector",
-      "source": "./plugins/repo-inspector"
+      "source": "./plugins/repo-inspector",
+      "category": "Developer Tools"
     },
     {
       "name": "mermaid",
-      "source": "./plugins/mermaid"
+      "source": "./plugins/mermaid",
+      "category": "Productivity"
     },
     {
       "name": "brainstorm",
-      "source": "./plugins/brainstorm"
+      "source": "./plugins/brainstorm",
+      "category": "Productivity"
     }
   ]
 }

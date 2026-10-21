@@ -1,13 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ponytail",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simplify implementations, review and audit over-engineering, track deliberate shortcuts, and inspect Ponytail benchmark results with eight bundled skills.",
   "author": {
     "name": "Saul Martí"
   },
   "license": "MIT",
-  "keywords": ["engineering-suite", "ponytail", "simplification", "review", "technical-debt"],
+  "keywords": ["ponytail", "engineering-suite", "code-quality", "refactoring", "simplification", "technical-debt"],
   "extensions": {
     "com.openai": {
       "interface": {
