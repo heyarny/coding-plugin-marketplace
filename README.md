@@ -94,7 +94,7 @@ inside their plugin directory so installations also work from a cached copy.
 
 ## Add plugins and publish
 
-Follow [Adding plugins](docs/adding-plugins.md) and [Contributing](CONTRIBUTING.md).
+Follow [Adding plugins](docs/adding-plugins.md).
 The starter uses repository-local sources, independent plugin versions, and
 optional installation. CI checks catalog alignment and package completeness.
 The validator covers this repository's skills-only layout; use client validation
