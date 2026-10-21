@@ -10,10 +10,38 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 | [Flutter Tools](plugins/flutter-tools/README.md) | Inspect running Flutter apps and diagnose motion with two bundled skills | Dart/Flutter MCP; native UI tools; macOS Simulator and ffmpeg for motion capture |
 | [Coordinate Codex Agents](plugins/coordinate-codex-agents/README.md) | Coordinate Codex app chats across saved projects | Host-provided Codex app task-management APIs |
 | [Repo Inspector](plugins/repo-inspector/README.md) | Map repository structure, entry points, and validation commands | Host file and shell tools |
+| [Mermaid](plugins/mermaid/README.md) | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
 
-## Try locally
+## Install and use
 
-From the repository root, check the catalog with Python 3.11 or newer:
+Install directly from GitHub. Add the marketplace once, then install the plugins
+you want from the table above.
+
+**Codex CLI**
+
+```sh
+codex plugin marketplace add heyarny/coding-plugin-marketplace
+codex plugin add repo-inspector@coding-plugins-marketplace
+```
+
+Start a new session and ask “Use Repo Inspector to map this repository.”
+Use `/plugins` to browse and manage plugins.
+
+**Claude Code**
+
+```sh
+claude plugin marketplace add heyarny/coding-plugin-marketplace
+claude plugin install repo-inspector@coding-plugins-marketplace
+```
+
+Start a new session and run `/repo-inspector:repo-map`.
+Replace `repo-inspector` in the install command with another plugin name from
+the table; each plugin's README has its usage examples and dependencies.
+
+## Develop locally
+
+After cloning this repository, check the catalog from the repository root with
+Python 3.11 or newer:
 
 ```sh
 python3 scripts/validate_marketplace.py

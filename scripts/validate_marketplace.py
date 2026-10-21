@@ -10,7 +10,8 @@ from pathlib import Path
 
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 VERSION = re.compile(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)")
-COMMON_FIELDS = ("name", "version", "description", "author", "license", "keywords")
+COMMON_FIELDS = ("name", "version", "description", "keywords")
+OPTIONAL_FIELDS = ("author", "license")
 SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
 
 
@@ -105,20 +106,28 @@ def validate_plugin(root, name, category):
     for field in COMMON_FIELDS:
         require(field in portable and field in claude and portable[field] == claude[field],
                 f"{name}: manifests disagree on {field}")
+    for field in OPTIONAL_FIELDS:
+        require((field in portable) == (field in claude)
+                and portable.get(field) == claude.get(field),
+                f"{name}: manifests disagree on {field}")
     require(portable["name"] == name, f"{name}: manifest name differs from catalog")
     version = text_field(portable, "version", name)
     require(VERSION.fullmatch(version), f"{name}: version must use stable MAJOR.MINOR.PATCH")
     text_field(portable, "description", name)
-    text_field(portable, "license", name)
-    text_field(object_field(portable, "author", name), "name", name)
+    if "license" in portable:
+        text_field(portable, "license", name)
+    if "author" in portable:
+        text_field(object_field(portable, "author", name), "name", name)
     keywords = portable["keywords"]
     require(isinstance(keywords, list) and bool(keywords)
             and all(isinstance(item, str) and item.strip() for item in keywords),
             f"{name}: keywords must be a nonempty array of strings")
     extensions = object_field(portable, "extensions", name)
     interface = object_field(object_field(extensions, "com.openai", name), "interface", name)
-    for field in ("displayName", "shortDescription", "longDescription", "developerName"):
+    for field in ("displayName", "shortDescription", "longDescription"):
         text_field(interface, field, name)
+    if "developerName" in interface:
+        text_field(interface, "developerName", name)
     require(interface.get("category") == category, f"{name}: listing category differs from catalog")
     require((root / "README.md").is_file(), f"{name}: missing plugin README.md")
     skills = root / "skills"

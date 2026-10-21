@@ -68,6 +68,37 @@ class MarketplaceValidationTests(unittest.TestCase):
     def test_valid_package_is_accepted(self):
         self.assertEqual(validate_marketplace(self.root), 1)
 
+    def test_package_without_author_or_license_is_accepted(self):
+        for manifest in (PORTABLE, CLAUDE_MANIFEST):
+            self.edit_json(manifest, lambda value: [value.pop(field) for field in ("author", "license")])
+        self.edit_json(PORTABLE, lambda value: value["extensions"]["com.openai"]["interface"].pop("developerName"))
+        self.assertEqual(validate_marketplace(self.root), 1)
+
+    def test_optional_metadata_drift_is_rejected(self):
+        for field in ("author", "license"):
+            with self.subTest(field=field):
+                original = (self.root / CLAUDE_MANIFEST).read_text()
+                self.edit_json(CLAUDE_MANIFEST, lambda value: value.pop(field))
+                with self.assertRaisesRegex(ValueError, f"manifests disagree on {field}"):
+                    validate_marketplace(self.root)
+                (self.root / CLAUDE_MANIFEST).write_text(original)
+
+    def test_invalid_optional_metadata_is_rejected(self):
+        for field, invalid in (("author", {"name": ""}), ("license", "")):
+            with self.subTest(field=field):
+                originals = {manifest: (self.root / manifest).read_text() for manifest in (PORTABLE, CLAUDE_MANIFEST)}
+                for manifest in originals:
+                    self.edit_json(manifest, lambda value: value.update({field: invalid}))
+                with self.assertRaises(ValueError):
+                    validate_marketplace(self.root)
+                for manifest, content in originals.items():
+                    (self.root / manifest).write_text(content)
+
+    def test_empty_developer_name_is_rejected(self):
+        self.edit_json(PORTABLE, lambda value: value["extensions"]["com.openai"]["interface"].update(developerName=""))
+        with self.assertRaisesRegex(ValueError, "missing or empty developerName"):
+            validate_marketplace(self.root)
+
     def test_duplicate_plugin_is_rejected(self):
         self.edit_json(CODEX_CATALOG, lambda value: value["plugins"].append(value["plugins"][0]))
         with self.assertRaisesRegex(ValueError, "duplicate plugin"):

@@ -26,6 +26,10 @@
     {
       "name": "repo-inspector",
       "source": "./plugins/repo-inspector"
+    },
+    {
+      "name": "mermaid",
+      "source": "./plugins/mermaid"
     }
   ]
 }

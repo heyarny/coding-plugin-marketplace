@@ -6,8 +6,9 @@ Copy the starter as a working package:
 cp -R plugins/repo-inspector plugins/my-plugin
 ```
 
-1. Update `name`, `version`, `description`, `author`, `license`, and `keywords`
-   in `plugin.json` and `.claude-plugin/plugin.json`. Keep those fields identical.
+1. Update `name`, `version`, `description`, and `keywords` in `plugin.json` and
+   `.claude-plugin/plugin.json`. Optional `author` and `license` fields must also
+   match when present. Keep those fields identical.
    Use a lowercase kebab-case name matching the directory and a version such as
    `1.0.0`. This starter validator accepts stable `MAJOR.MINOR.PATCH` versions.
 2. Update `extensions.com.openai.interface` in the portable manifest for the

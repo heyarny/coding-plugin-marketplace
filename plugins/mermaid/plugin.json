@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mermaid",
+  "version": "1.0.0",
+  "description": "Generate Mermaid diagrams from user requirements. Supports 23+ diagram types including flowcharts, sequence diagrams, class diagrams, ER diagrams, Gantt charts, and more.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mermaid",
+    "diagrams",
+    "visualization",
+    "flowchart",
+    "sequence-diagram"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Mermaid",
+        "shortDescription": "Generate Mermaid diagrams from requirements",
+        "longDescription": "Choose an appropriate diagram type, consult bundled Mermaid syntax and configuration references, and generate styled Mermaid code for flowcharts, sequence diagrams, database models, architecture diagrams, and more.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Mermaid to create a flowchart for a user login process.",
+          "Use Mermaid to draw a sequence diagram for API authentication."
+        ]
+      }
+    }
+  }
+}
