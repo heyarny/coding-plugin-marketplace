@@ -51,6 +51,11 @@
       "name": "grill-me",
       "source": "./plugins/grill-me",
       "category": "Productivity"
+    },
+    {
+      "name": "codebase-design",
+      "source": "./plugins/codebase-design",
+      "category": "Developer Tools"
     }
   ]
 }

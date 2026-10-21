@@ -14,6 +14,7 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 | [Mermaid](plugins/mermaid/README.md) | Productivity | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
 | [Brainstorm](plugins/brainstorm/README.md) | Productivity | Explore ideas, compare alternatives, and refine a direction through conversation | Conversation; optional file, web search, and local subagent tools |
 | [GrillMe](plugins/grill-me/README.md) | Productivity | Challenge plans, clarify intent, and develop domain models or workflow specs with eight bundled skills | Interactive user; host file, question, and local subagent tools; Bash for the optional helper |
+| [CodebaseDesign](plugins/codebase-design/README.md) | Developer Tools | Design module interfaces, review architecture, and optionally enforce TypeScript package boundaries | Host repository tools and local subagents; Node.js and a package manager for explicit TypeScript setup; network for report CDNs |
 
 Categories describe the broad purpose of each plugin and match in both catalogs.
 Manifest keywords identify specific workflows, such as code review, refactoring,

@@ -1,0 +1,10 @@
+{
+  "name": "codebase-design",
+  "version": "1.0.0",
+  "description": "Design deep module interfaces, identify architectural improvements, and optionally set up TypeScript module boundaries with bundled design and interview workflows.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["codebase-design", "engineering-suite", "architecture", "module-design", "refactoring", "testability", "typescript"]
+}

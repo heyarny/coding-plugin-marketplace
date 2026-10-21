@@ -1,0 +1,57 @@
+{
+  "sourcePlugin": {
+    "name": "engineering-suite-codebase-design",
+    "version": "2.0.0",
+    "marketplace": "openai-curated-remote",
+    "author": "Saul Martí"
+  },
+  "bundledDependencySources": {
+    "grilling": {
+      "plugin": "engineering-suite-grill-me",
+      "version": "2.0.0",
+      "marketplace": "openai-curated-remote"
+    },
+    "domain-modeling": {
+      "plugin": "engineering-suite-grill-me",
+      "version": "2.0.0",
+      "marketplace": "openai-curated-remote"
+    }
+  },
+  "upstream": {
+    "aihero": {
+      "repository": "https://github.com/mattpocock/skills",
+      "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "skill_count": 5,
+      "skills": [
+        "codebase-design",
+        "improve-codebase-architecture",
+        "setup-ts-deep-modules",
+        "grilling",
+        "domain-modeling"
+      ]
+    }
+  },
+  "sourceFileSha256": {
+    "LICENSE": "cf528a33542cc035fc8063e7e924505d4b8464f4361d9ef18f6728918594254f",
+    "assets/composer-icon.svg": "70f9baec94fc25bdba860f160aa11c0e6e495071f061157b3be537605644d58f",
+    "assets/logo.svg": "fffd57c92f19fd1fff2b7ab77e1bc8ad991756e4425ed08231ec49524ec6c68a",
+    "skills/codebase-design/DEEPENING.md": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+    "skills/codebase-design/DESIGN-IT-TWICE.md": "8e740bf98446dbd4dfdc132ac4346d9a7eedaf93de6a495889171cf7f99f16bd",
+    "skills/codebase-design/SKILL.md": "c5265b8a8279c569956960111a6fe3bdf51277ab2f89a5ec8fa24cf6b421bd96",
+    "skills/codebase-design/agents/openai.yaml": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+    "skills/domain-modeling/ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+    "skills/domain-modeling/CONTEXT-FORMAT.md": "17ab16ce783e4d2801ee52fd9acdf550cbf44de65ae76797a93943bbedf22a13",
+    "skills/domain-modeling/SKILL.md": "f842e2604d468313f968d225e68f707f08ebf0c8764f50254f920535ad01a40a",
+    "skills/domain-modeling/agents/openai.yaml": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+    "skills/entry-codebase-design/SKILL.md": "99ef49771573d27a8a3debba6e64e37502846f46302a0fa929c787d01963bbbf",
+    "skills/grilling/SKILL.md": "05eda00533d358bb646147c2ffa8c38129103629f679d7c977f67a6afc18ccaf",
+    "skills/grilling/agents/openai.yaml": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+    "skills/improve-codebase-architecture/HTML-REPORT.md": "581e8bb5a521e46bbda8ca7e19b15948bed882187108092ebb90c62513b77528",
+    "skills/improve-codebase-architecture/SKILL.md": "d1ac25511a936ff4250a48dbcefda363837d6bb9321b3cba73df99fa37270a75",
+    "skills/improve-codebase-architecture/agents/openai.yaml": "c8cb20f68ebf0edb4e497bc11ae5fcaa196004e661cd189015b04f4109ced7f1",
+    "skills/setup-ts-deep-modules/SKILL.md": "29acca66ac99d4532e2a6f0370d8125d7cba1e87c9ac66573203c75189d3e6c7",
+    "skills/setup-ts-deep-modules/agents/openai.yaml": "159f680217d50747702620c05fd65734a152185b3219a8ca5ee4630878a354fa",
+    "skills/setup-ts-deep-modules/dependency-cruiser.config.cjs": "3c4973bec69f73b2117654abf9e666a7c28665b213be20e6d39869e29842428e",
+    "third_party_licenses/aihero-LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codebase-design",
+  "version": "1.0.0",
+  "description": "Design deep module interfaces, identify architectural improvements, and optionally set up TypeScript module boundaries with bundled design and interview workflows.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["codebase-design", "engineering-suite", "architecture", "module-design", "refactoring", "testability", "typescript"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CodebaseDesign",
+        "shortDescription": "Design deep module seams",
+        "longDescription": "Bundle Engineering Suite CodebaseDesign's entry workflow, module-design vocabulary, architecture review, and explicitly requested TypeScript setup. Grilling and Domain Modeling are included locally so the architecture workflow can refine candidates without another plugin installation. Includes design references, an HTML report scaffold, and a dependency-cruiser configuration template. Requires host repository tools and local subagents; TypeScript setup additionally uses Node.js and the project's package manager. Upstream attribution and MIT licenses are preserved; Arnold Stark maintains this marketplace packaging.",
+        "developerName": "Saul Martí",
+        "category": "Developer Tools",
+        "brandColor": "#22C55E",
+        "brandColorDark": "#3ADD76",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/composer-icon.svg",
+        "defaultPrompt": [
+          "Use CodebaseDesign to design a deeper module interface for this code.",
+          "Use CodebaseDesign to identify architecture deepening opportunities in this repository.",
+          "Use CodebaseDesign to help me choose where the seam and interface should live."
+        ]
+      }
+    }
+  }
+}
