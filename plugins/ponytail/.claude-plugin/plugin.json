@@ -1,0 +1,10 @@
+{
+  "name": "ponytail",
+  "version": "1.0.0",
+  "description": "Simplify implementations, review and audit over-engineering, track deliberate shortcuts, and inspect Ponytail benchmark results with eight bundled skills.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["engineering-suite", "ponytail", "simplification", "review", "technical-debt"]
+}

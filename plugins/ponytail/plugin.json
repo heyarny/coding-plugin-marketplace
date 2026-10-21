@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ponytail",
+  "version": "1.0.0",
+  "description": "Simplify implementations, review and audit over-engineering, track deliberate shortcuts, and inspect Ponytail benchmark results with eight bundled skills.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["engineering-suite", "ponytail", "simplification", "review", "technical-debt"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Ponytail",
+        "shortDescription": "Cut code and complexity",
+        "longDescription": "Bundle all eight skills from Engineering Suite Ponytail: its entry workflow, Ponytail mode, review, audit, debt ledger, benchmark scoreboard, help, and code simplification. Uses host file, shell, Git, and project validation tools. Upstream attribution and MIT licenses are preserved; this marketplace package is maintained by Arnold Stark.",
+        "developerName": "Saul Martí",
+        "category": "Developer Tools",
+        "brandColor": "#22C55E",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/composer-icon.svg",
+        "defaultPrompt": [
+          "Use Ponytail to simplify this implementation while preserving required behavior.",
+          "Use Ponytail Audit to identify over-engineering across this repository.",
+          "Use Ponytail Review to list unnecessary complexity in my diff."
+        ]
+      }
+    }
+  }
+}

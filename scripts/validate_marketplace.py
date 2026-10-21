@@ -92,8 +92,18 @@ def validate_skill(path):
     names = re.findall(r"^name: ([a-z0-9]+(?:-[a-z0-9]+)*)$", header, re.MULTILINE)
     require(names == [path.parent.name], f"{path}: skill name must match its directory")
     descriptions = re.findall(r"^description: (\S.*)$", header, re.MULTILINE)
-    require(len(descriptions) == 1 and descriptions[0][0] not in "'\"|>#",
-            f"{path}: description must be nonempty, unquoted single-line text")
+    description_error = f"{path}: description must be nonempty single-line text (plain or JSON double-quoted)"
+    require(len(descriptions) == 1, description_error)
+    description = descriptions[0]
+    if description.startswith('"'):
+        try:
+            description = json.loads(description)
+        except ValueError as error:
+            raise ValueError(description_error) from error
+    else:
+        require(description[0] not in "'|>#", description_error)
+    require(isinstance(description, str) and bool(description.strip())
+            and "\n" not in description and "\r" not in description, description_error)
     require(bool(body.strip()), f"{path}: skill instructions are empty")
 
 

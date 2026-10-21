@@ -24,6 +24,10 @@
       "source": "./plugins/coordinate-codex-agents"
     },
     {
+      "name": "ponytail",
+      "source": "./plugins/ponytail"
+    },
+    {
       "name": "repo-inspector",
       "source": "./plugins/repo-inspector"
     },

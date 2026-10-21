@@ -152,6 +152,23 @@ class MarketplaceValidationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "description must be nonempty"):
             validate_marketplace(self.root)
 
+    def test_quoted_skill_description_is_accepted(self):
+        path = self.root / PLUGIN / "skills/repo-map/SKILL.md"
+        description = json.dumps('Map a repository. Trigger: "repo map".')
+        path.write_text(path.read_text().replace("description: Map a repository.",
+                                                 f"description: {description}"))
+        self.assertEqual(validate_marketplace(self.root), 1)
+
+    def test_invalid_quoted_skill_descriptions_are_rejected(self):
+        path = self.root / PLUGIN / "skills/repo-map/SKILL.md"
+        original = path.read_text()
+        for description in ('"unterminated', '"bad\\q"', '"   "', '"line\\nbreak"', '"line\\rbreak"'):
+            with self.subTest(description=description):
+                path.write_text(original.replace("description: Map a repository.",
+                                                 f"description: {description}"))
+                with self.assertRaisesRegex(ValueError, "description must be nonempty"):
+                    validate_marketplace(self.root)
+
     def test_duplicate_json_key_is_rejected(self):
         (self.root / PORTABLE).write_text('{"name":"repo-inspector","name":"other"}')
         with self.assertRaisesRegex(ValueError, "duplicate JSON key"):

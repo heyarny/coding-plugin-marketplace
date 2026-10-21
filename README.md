@@ -9,6 +9,7 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 | [Git Commit](plugins/git-commit/README.md) | Draft Conventional Commit messages or commit staged changes | Host Git and shell tools |
 | [Flutter Tools](plugins/flutter-tools/README.md) | Inspect running Flutter apps and diagnose motion with two bundled skills | Dart/Flutter MCP; native UI tools; macOS Simulator and ffmpeg for motion capture |
 | [Coordinate Codex Agents](plugins/coordinate-codex-agents/README.md) | Coordinate Codex app chats across saved projects | Host-provided Codex app task-management APIs |
+| [Ponytail](plugins/ponytail/README.md) | Simplify code, review and audit complexity, and track deliberate shortcuts with eight bundled skills | Host file, shell, Git, and project validation tools |
 | [Repo Inspector](plugins/repo-inspector/README.md) | Map repository structure, entry points, and validation commands | Host file and shell tools |
 | [Mermaid](plugins/mermaid/README.md) | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
 

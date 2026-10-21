@@ -1,0 +1,41 @@
+{
+  "sourcePlugin": {
+    "name": "engineering-suite-ponytail",
+    "version": "2.0.0",
+    "marketplace": "openai-curated-remote",
+    "author": "Saul Martí"
+  },
+  "upstream": {
+    "ponytail": {
+      "repository": "https://github.com/DietrichGebert/ponytail",
+      "commit": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+      "skill_count": 6,
+      "skills": [
+        "ponytail",
+        "ponytail-audit",
+        "ponytail-debt",
+        "ponytail-gain",
+        "ponytail-help",
+        "ponytail-review"
+      ]
+    },
+    "addy": {
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "commit": "6ca0cd7db39b41b1c37e26d335c507ee92382c6d",
+      "skill_count": 1,
+      "skills": [
+        "code-simplification"
+      ]
+    }
+  },
+  "sourceSkillSha256": {
+    "skills/code-simplification/SKILL.md": "bd78ae65195fee4a03ae407d31ace2d8f1cf44e83b40e3df4fb0429c8cb0c7b4",
+    "skills/entry-ponytail/SKILL.md": "fee9e0ce8e9bc0eb93af29b452acc0ff86373c2934a875e208956a6d2f095aeb",
+    "skills/ponytail/SKILL.md": "3d413849a55a3bdd8b01c860b5ae4a2f2b0cacfe1bfc0c97439ecc05e92219d7",
+    "skills/ponytail-audit/SKILL.md": "1e7348762f289ddae0fd785dccb66212ae127debdd3c0c6dc39691866ff5fe1d",
+    "skills/ponytail-debt/SKILL.md": "616e72782c3b7968888430fd8314899c175ea79ec16073d638fa582b4d6140b2",
+    "skills/ponytail-gain/SKILL.md": "eecde3e21a9ce7c94300a288cce1a5e5251f4913c0abefdd99ee279b96a313d8",
+    "skills/ponytail-help/SKILL.md": "ed807f06935af6637896d2a91d9184bd0445d773bdeda2983d622d6d8d0ac2de",
+    "skills/ponytail-review/SKILL.md": "5e0fd5dc55adba28f503645c3492a2d566d9521f28bece92db5d25ebbfb9f173"
+  }
+}
