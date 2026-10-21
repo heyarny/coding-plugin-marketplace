@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "git-commit",
-  "version": "1.0.0",
-  "description": "Draft concise Conventional Commit messages from staged changes, or commit the staged change set when invoked without draft mode.",
+  "version": "1.1.0",
+  "description": "Draft concise Conventional Commit messages or commit staged changes, with prominent breaking-change warnings and approval before breaking commits.",
   "author": {
     "name": "Arnold Stark"
   },
@@ -13,7 +13,7 @@
       "interface": {
         "displayName": "Git Commit",
         "shortDescription": "Draft messages or commit staged changes",
-        "longDescription": "Inspect only the current Git index, choose a concise Conventional Commit message, and commit on the current branch. Include draft for a message preview. Mixed unrelated changes require a decision before splitting or committing; index changes for a split require approval, and the skill does not push.",
+        "longDescription": "Inspect only the current Git index, choose a concise Conventional Commit message, and commit on the current branch. Include draft for a message preview. Breaking changes receive a prominent warning, an explanation of their impact, and require explicit approval before committing or changing the index. Drafts also show breaking-change warnings. Mixed unrelated changes require a decision before splitting or committing, and the skill does not push.",
         "developerName": "Arnold Stark",
         "category": "Developer Tools",
         "defaultPrompt": [

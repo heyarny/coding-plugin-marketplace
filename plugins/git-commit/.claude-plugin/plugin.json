@@ -1,7 +1,7 @@
 {
   "name": "git-commit",
-  "version": "1.0.0",
-  "description": "Draft concise Conventional Commit messages from staged changes, or commit the staged change set when invoked without draft mode.",
+  "version": "1.1.0",
+  "description": "Draft concise Conventional Commit messages or commit staged changes, with prominent breaking-change warnings and approval before breaking commits.",
   "author": {
     "name": "Arnold Stark"
   },

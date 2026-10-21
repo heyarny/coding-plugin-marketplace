@@ -1,6 +1,6 @@
 ---
 name: git-commit
-description: Draft concise Conventional Commit messages from the current git index. Use when Codex needs to inspect staged changes only, classify them with the Conventional Commits 1.0.0 format, suggest a brief commit title with optional bullet details for larger changes, or commit the staged change set on the current branch. If the user explicitly includes `draft`, return the proposed message only and do not commit.
+description: Draft concise Conventional Commit messages from the current git index or commit staged changes on the current branch. Use for staged-only commit previews and commits. Warn prominently about breaking changes and wait for explicit approval before a breaking commit. Include `draft` to preview the message and any warning without committing.
 ---
 
 # Git Commit
@@ -11,7 +11,7 @@ Inspect only the staged diff and produce a Conventional Commit message for that 
 
 Use the Conventional Commits 1.0.0 structure: `<type>[optional scope]: <description>`. Treat `feat` as a new feature, `fix` as a bug fix, and use other standard types when they fit better.
 
-Default behavior is to commit the staged changes on the current branch. If the user explicitly includes `draft`, return the proposed commit message only and do not perform the commit.
+Default behavior is to commit the staged changes on the current branch once any required breaking-change or mixed-work approvals are satisfied. If the user explicitly includes `draft`, preview the message without committing. Breaking changes always receive the warning in step 7, including in draft mode.
 
 ## Workflow
 
@@ -56,9 +56,14 @@ Default behavior is to commit the staged changes on the current branch. If the u
    - Prefer bullets like `- Add credit balance persistence` over vague or process-heavy bullets.
    - Do not include a body for simple changes where the subject is enough.
 
-7. Flag breaking changes when the staged diff clearly changes a public contract.
-   - Use `!` after the type or scope when the title itself should carry that signal.
-   - Use a `BREAKING CHANGE:` footer when the staged diff clearly requires it, after any bullet body.
+7. Warn prominently about breaking changes and let the user intervene.
+   - Look for staged changes that make existing consumers incompatible: removed or changed public APIs, CLI arguments, configuration formats, data contracts, or previously supported behavior. Internal refactoring alone is not a breaking change.
+   - Before committing or changing the index, display a standalone Markdown heading: `## ⚠️ BREAKING CHANGE`. Keep the warning outside the commit message and lead the response with it.
+   - Explain the old and new behavior, who or what will break, and the required caller changes or migration. Cite the staged files or hunks that support the warning. If staged evidence suggests a break but does not establish it, label the heading `## ⚠️ POTENTIAL BREAKING CHANGE` and state the specific uncertainty.
+   - Show the full proposed commit message. For a confirmed breaking change, include `!` after the type or scope and a `BREAKING CHANGE:` footer describing the impact and required adaptation, after any bullet body.
+   - In commit mode, pause without committing or changing the index. Ask the user to approve this specific breaking impact before committing, or choose to revise the changes or split the breaking change into a separate commit. A generic commit request or approval to split unrelated work does not establish that the user has accepted the breaking impact.
+   - Honor an explicit approval already given for the same breaking impact after it was explained. If the staged changes change, reassess the impact and obtain approval for any new or changed break. Leave the staged changes intact while awaiting a decision; revise or split them only as authorized.
+   - In draft mode, show the warning followed by the proposed message, then stop. Do not request permission to commit a draft or perform a commit.
 
 8. Handle mixed staged work deliberately.
    - If the staged set contains multiple unrelated concerns, say a split is advisable and briefly group the changes by concern.
@@ -71,17 +76,18 @@ Default behavior is to commit the staged changes on the current branch. If the u
 
 9. Respect `draft` mode when the user explicitly asks for it.
    - Treat `draft` as message-preview mode.
-   - In `draft` mode, inspect only staged changes, choose the full message, and return it without committing.
-   - Without `draft`, commit the staged changes on the current branch using the proposed message.
+   - In `draft` mode, inspect only staged changes and return the full message without committing. Include the step 7 warning when applicable.
+   - Without `draft`, commit the staged changes on the current branch using the proposed message only after the approvals required by steps 7 and 8 are satisfied.
    - When committing a message with a body, pass the subject and body separately, for example with repeated `git commit -m` arguments, so the subject remains the first line.
    - Preserve the blank line between the subject and the first body bullet in both draft output and actual commits.
    - Do not push as part of this skill. Pushing is outside this skill unless the user asks separately outside the skill flow.
 
 ## Output
 
-- Default output: commit the staged changes using the generated message.
-- If the user asks for explanation, include the proposed message first and then a one-sentence rationale.
-- If the user explicitly includes `draft`, output only the proposed commit message.
+- Default output: commit the staged changes using the generated message once required approvals are satisfied.
+- If the user asks for explanation, add a one-sentence rationale after the proposed message; keep any breaking-change warning first.
+- If the user explicitly includes `draft`, output only the proposed commit message, preceded by the step 7 warning when applicable.
+- For a breaking or potentially breaking change in commit mode, lead with the prominent warning and proposed message, and wait for explicit approval before committing or changing the index.
 - If mixed staged work should be split, output the split recommendation and ask for approval before committing.
 - If the user asks to perform the commit, use only the staged content and the approved message.
 
@@ -115,6 +121,13 @@ Draft-aware examples:
 
 - User asks for `$git-commit` after staging docs changes:
   - execute: commit staged changes on the current branch with `docs: reorganize VAC documentation`
+
+Breaking-change example:
+
+- The staged diff replaces the public CLI option `--config` with `--settings`:
+  - Lead with `## ⚠️ BREAKING CHANGE` and explain that existing scripts using `--config` will fail and must switch to `--settings`, with staged evidence.
+  - Propose `feat(cli)!: replace config option with settings` with the footer `BREAKING CHANGE: --config is no longer accepted; use --settings instead.`
+  - In commit mode, wait for the user's explicit approval of this impact before committing. In draft mode, show the warning and message without committing or requesting approval.
 
 ## Notes
 
