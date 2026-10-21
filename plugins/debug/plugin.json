@@ -1,0 +1,40 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "debug",
+  "version": "1.0.0",
+  "description": "Diagnose bugs and performance regressions, reproduce failures, and fix root causes with regression tests and bundled browser, TDD, and merge-conflict workflows.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": [
+    "debugging",
+    "engineering-suite",
+    "root-cause-analysis",
+    "regression-testing",
+    "tdd",
+    "browser-testing",
+    "performance",
+    "merge-conflicts"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Debug",
+        "shortDescription": "Diagnose and fix bugs",
+        "longDescription": "Bundle all nine Engineering Suite Debug workflows with their diagnosis loop template, testing examples, module-design references, and performance checklist. Uses host repository tools and project test commands; browser checks additionally require a separately configured Chrome DevTools MCP server, Chrome, and Node.js. Upstream attribution and MIT licenses are preserved; Arnold Stark maintains this marketplace packaging.",
+        "developerName": "Saul Martí",
+        "category": "Developer Tools",
+        "brandColor": "#22C55E",
+        "brandColorDark": "#3ADD76",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/composer-icon.svg",
+        "defaultPrompt": [
+          "Use Debug to diagnose this regression and fix its root cause with a regression test.",
+          "Use Debug to find why this browser flow is failing.",
+          "Use Debug to measure and investigate this performance regression."
+        ]
+      }
+    }
+  }
+}

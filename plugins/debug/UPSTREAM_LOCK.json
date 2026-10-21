@@ -1,0 +1,59 @@
+{
+  "sourcePlugin": {
+    "name": "engineering-suite-debug",
+    "version": "2.0.0",
+    "marketplace": "openai-curated-remote",
+    "author": "Saul Martí"
+  },
+  "upstream": {
+    "aihero": {
+      "repository": "https://github.com/mattpocock/skills",
+      "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "skill_count": 4,
+      "skills": [
+        "codebase-design",
+        "diagnosing-bugs",
+        "resolving-merge-conflicts",
+        "tdd"
+      ]
+    },
+    "addy": {
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "commit": "6ca0cd7db39b41b1c37e26d335c507ee92382c6d",
+      "skill_count": 4,
+      "skills": [
+        "browser-testing-with-devtools",
+        "debugging-and-error-recovery",
+        "performance-optimization",
+        "test-driven-development"
+      ]
+    }
+  },
+  "sourceFileSha256": {
+    "LICENSE": "cf528a33542cc035fc8063e7e924505d4b8464f4361d9ef18f6728918594254f",
+    "assets/composer-icon.svg": "79435daf453a2f5a9dbe923e1dfad231e4fb8b5be0cfdef239344f0c40fc7dbb",
+    "assets/logo.svg": "e56078cc7fc3a804519a4db7ed528cfbb2084ebae9d18d9d1b403ef5ad8abeaf",
+    "references/performance-checklist.md": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+    "references/testing-patterns.md": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+    "skills/browser-testing-with-devtools/SKILL.md": "33010943fda9036ce0dd63ddfaef3ac3d80f4424fddd40a14ecae250d53efc82",
+    "skills/codebase-design/DEEPENING.md": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+    "skills/codebase-design/DESIGN-IT-TWICE.md": "8e740bf98446dbd4dfdc132ac4346d9a7eedaf93de6a495889171cf7f99f16bd",
+    "skills/codebase-design/SKILL.md": "c5265b8a8279c569956960111a6fe3bdf51277ab2f89a5ec8fa24cf6b421bd96",
+    "skills/codebase-design/agents/openai.yaml": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+    "skills/debugging-and-error-recovery/SKILL.md": "64a2fdd930a1d844263c751000ccd033dac968ff0ca6bad1f78de14b766d241f",
+    "skills/diagnosing-bugs/SKILL.md": "1a7a6e1f011976e5e302b8f5d26bf236bf0f83f3f37e53dea2a23bf9de548265",
+    "skills/diagnosing-bugs/agents/openai.yaml": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+    "skills/diagnosing-bugs/scripts/hitl-loop.template.sh": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+    "skills/entry-debug/SKILL.md": "7494d09a9fa9e4d0992bf39fe1781e39dcff23b16a611dfe5484823b8ced7d01",
+    "skills/performance-optimization/SKILL.md": "d29537aafb8077334f3b35a66a379e5ed03f2dabb7ab6f3da319f502135f313c",
+    "skills/resolving-merge-conflicts/SKILL.md": "432fac0f100cc907144d01689d19182c5582fbec765651f2a987df2ba672881e",
+    "skills/resolving-merge-conflicts/agents/openai.yaml": "a1f4f96838f2ed6282eb28abbbf99029cb8fadce552baf53da90a025b8bffddf",
+    "skills/tdd/SKILL.md": "610551ba2691f1d6ca00eeba73978e955e086cd6762f6918280b606d415e7d9d",
+    "skills/tdd/agents/openai.yaml": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+    "skills/tdd/mocking.md": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+    "skills/tdd/tests.md": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+    "skills/test-driven-development/SKILL.md": "a82049a031e6cea08e6f7e8f632cb0ef2c0ac7c30f52e9057eef983deee9181b",
+    "third_party_licenses/addy-LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+    "third_party_licenses/aihero-LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

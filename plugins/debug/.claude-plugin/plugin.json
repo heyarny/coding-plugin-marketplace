@@ -1,0 +1,19 @@
+{
+  "name": "debug",
+  "version": "1.0.0",
+  "description": "Diagnose bugs and performance regressions, reproduce failures, and fix root causes with regression tests and bundled browser, TDD, and merge-conflict workflows.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": [
+    "debugging",
+    "engineering-suite",
+    "root-cause-analysis",
+    "regression-testing",
+    "tdd",
+    "browser-testing",
+    "performance",
+    "merge-conflicts"
+  ]
+}
