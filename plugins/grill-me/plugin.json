@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "grill-me",
+  "version": "1.0.0",
+  "description": "Sharpen ideas, plans, and designs through demanding interviews, intent discovery, domain modeling, and workflow specifications with eight bundled skills.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["grill-me", "engineering-suite", "interviews", "requirements", "planning", "domain-modeling", "idea-refinement"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GrillMe",
+        "shortDescription": "Interrogate plans and ideas",
+        "longDescription": "Bundle all eight skills from Engineering Suite GrillMe: its entry workflow, Grill Me, Grill with Docs, Grilling, Domain Modeling, Idea Refine, Interview Me, and Loop Me. Challenge assumptions, clarify intent, and capture domain terms, decisions, or workflow specs when the selected mode calls for them. Requires an interactive user and host tools for repository work; the package stays focused on design rather than implementation. Upstream attribution and MIT licenses are preserved; Arnold Stark maintains this marketplace packaging.",
+        "developerName": "Saul Martí",
+        "category": "Productivity",
+        "brandColor": "#22C55E",
+        "brandColorDark": "#3ADD76",
+        "logo": "./assets/logo.svg",
+        "composerIcon": "./assets/composer-icon.svg",
+        "defaultPrompt": [
+          "Use GrillMe to challenge this feature idea until the decisions are clear.",
+          "Use GrillMe to refine this product idea and challenge its weak assumptions.",
+          "Use GrillMe to interview me and uncover what I actually need."
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "grill-me",
+  "version": "1.0.0",
+  "description": "Sharpen ideas, plans, and designs through demanding interviews, intent discovery, domain modeling, and workflow specifications with eight bundled skills.",
+  "author": {
+    "name": "Saul Martí"
+  },
+  "license": "MIT",
+  "keywords": ["grill-me", "engineering-suite", "interviews", "requirements", "planning", "domain-modeling", "idea-refinement"]
+}

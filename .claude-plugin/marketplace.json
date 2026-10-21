@@ -46,6 +46,11 @@
       "name": "brainstorm",
       "source": "./plugins/brainstorm",
       "category": "Productivity"
+    },
+    {
+      "name": "grill-me",
+      "source": "./plugins/grill-me",
+      "category": "Productivity"
     }
   ]
 }

@@ -13,6 +13,7 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 | [Repo Inspector](plugins/repo-inspector/README.md) | Developer Tools | Map repository structure, entry points, and validation commands | Host file and shell tools |
 | [Mermaid](plugins/mermaid/README.md) | Productivity | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
 | [Brainstorm](plugins/brainstorm/README.md) | Productivity | Explore ideas, compare alternatives, and refine a direction through conversation | Conversation; optional file, web search, and local subagent tools |
+| [GrillMe](plugins/grill-me/README.md) | Productivity | Challenge plans, clarify intent, and develop domain models or workflow specs with eight bundled skills | Interactive user; host file, question, and local subagent tools; Bash for the optional helper |
 
 Categories describe the broad purpose of each plugin and match in both catalogs.
 Manifest keywords identify specific workflows, such as code review, refactoring,

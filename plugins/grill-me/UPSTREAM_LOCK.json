@@ -1,0 +1,57 @@
+{
+  "sourcePlugin": {
+    "name": "engineering-suite-grill-me",
+    "version": "2.0.0",
+    "marketplace": "openai-curated-remote",
+    "author": "Saul Martí"
+  },
+  "upstream": {
+    "aihero": {
+      "repository": "https://github.com/mattpocock/skills",
+      "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "skill_count": 5,
+      "skills": [
+        "grill-me",
+        "grill-with-docs",
+        "grilling",
+        "domain-modeling",
+        "loop-me"
+      ]
+    },
+    "addy": {
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "commit": "6ca0cd7db39b41b1c37e26d335c507ee92382c6d",
+      "skill_count": 2,
+      "skills": [
+        "idea-refine",
+        "interview-me"
+      ]
+    }
+  },
+  "sourceFileSha256": {
+    "LICENSE": "cf528a33542cc035fc8063e7e924505d4b8464f4361d9ef18f6728918594254f",
+    "assets/composer-icon.svg": "8bef9c2d6aa8fc0e101e1af7efd899449e6007c5d3c0567c7480f9b97b6ef240",
+    "assets/logo.svg": "8ad6e28b58bb234ac4c54e3b33d2c24845c26c6fb35bbea07209d4d938c15803",
+    "skills/domain-modeling/ADR-FORMAT.md": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+    "skills/domain-modeling/CONTEXT-FORMAT.md": "17ab16ce783e4d2801ee52fd9acdf550cbf44de65ae76797a93943bbedf22a13",
+    "skills/domain-modeling/SKILL.md": "f842e2604d468313f968d225e68f707f08ebf0c8764f50254f920535ad01a40a",
+    "skills/domain-modeling/agents/openai.yaml": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+    "skills/entry-grill-me/SKILL.md": "70e83fba7860f9d9bf6ec7e2746494054ef7519c528512a834abb5c4b705688a",
+    "skills/grill-me/SKILL.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+    "skills/grill-me/agents/openai.yaml": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b",
+    "skills/grill-with-docs/SKILL.md": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+    "skills/grill-with-docs/agents/openai.yaml": "94cd0ab161fb468a836349f5ed482ba58ce8e709a05c57ce533d739dbd35cca9",
+    "skills/grilling/SKILL.md": "05eda00533d358bb646147c2ffa8c38129103629f679d7c977f67a6afc18ccaf",
+    "skills/grilling/agents/openai.yaml": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+    "skills/idea-refine/SKILL.md": "addadd479af9ee9f903e02d8f43952d95769547453668dc31bfcfda1d0c7e366",
+    "skills/idea-refine/examples.md": "563204bfbf2f80a444151695205af4cb759e722b3d1e5460e08f278a69c89ba1",
+    "skills/idea-refine/frameworks.md": "161ebc18fdf2d996bc62a87a2d747cf1bf53548354f8925de25c732c27f00309",
+    "skills/idea-refine/refinement-criteria.md": "1ca2973a4d01b5cb37ab7ddb2eff77fa4e792634a33d0ce44961c068fc88d51a",
+    "skills/idea-refine/scripts/idea-refine.sh": "f02a52408a4218047c032d221483abfbb48d11f090bb4915965c7419bf2e0e47",
+    "skills/interview-me/SKILL.md": "b9d69dfa27c713dc4d94dc2ed9a5aafde8081bddfd6a69a9a12028e5f4be9eab",
+    "skills/loop-me/SKILL.md": "e44d1cc3e760fb86ac42964c2a5f1fcac511715db50fb375f3f7be814de1eaa7",
+    "skills/loop-me/agents/openai.yaml": "b66fa10079957051be6a812f45e55b67ac394b71d5ba88349962b4c9205802c3",
+    "third_party_licenses/addy-LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+    "third_party_licenses/aihero-LICENSE": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}
