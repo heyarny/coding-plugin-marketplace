@@ -12,6 +12,7 @@ Code**. Plugin content is shared; each client gets its own catalog and manifest.
 | [Ponytail](plugins/ponytail/README.md) | Simplify code, review and audit complexity, and track deliberate shortcuts with eight bundled skills | Host file, shell, Git, and project validation tools |
 | [Repo Inspector](plugins/repo-inspector/README.md) | Map repository structure, entry points, and validation commands | Host file and shell tools |
 | [Mermaid](plugins/mermaid/README.md) | Generate Mermaid diagrams from requirements using bundled syntax references | Host file tools; Mermaid renderer for visual previews |
+| [Brainstorm](plugins/brainstorm/README.md) | Explore ideas, compare alternatives, and refine a direction through conversation | Conversation; optional file, web search, and local subagent tools |
 
 ## Install and use
 

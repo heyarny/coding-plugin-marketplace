@@ -34,6 +34,10 @@
     {
       "name": "mermaid",
       "source": "./plugins/mermaid"
+    },
+    {
+      "name": "brainstorm",
+      "source": "./plugins/brainstorm"
     }
   ]
 }

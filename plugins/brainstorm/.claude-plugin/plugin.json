@@ -1,0 +1,10 @@
+{
+  "name": "brainstorm",
+  "version": "1.0.0",
+  "description": "Explore ideas, compare distinct alternatives with concrete examples, and refine a direction through collaborative brainstorming across topics.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["brainstorming", "ideas", "alternatives", "decision-making", "planning"]
+}

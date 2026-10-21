@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "brainstorm",
+  "version": "1.0.0",
+  "description": "Explore ideas, compare distinct alternatives with concrete examples, and refine a direction through collaborative brainstorming across topics.",
+  "author": {
+    "name": "Arnold Stark"
+  },
+  "license": "MIT",
+  "keywords": ["brainstorming", "ideas", "alternatives", "decision-making", "planning"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Brainstorm",
+        "shortDescription": "Explore ideas and compare alternatives",
+        "longDescription": "Develop ideas through conversation: establish the frame, explore distinct alternatives with concrete examples, compare their consequences, and refine a direction. Tables, diagrams, research, and independent subagents are optional when useful and supported by the host. Applies across topics and stays exploratory until implementation is requested.",
+        "developerName": "Arnold Stark",
+        "category": "Developer Tools",
+        "defaultPrompt": [
+          "Use Brainstorm to explore alternatives for my idea and compare the tradeoffs with concrete examples.",
+          "Use Brainstorm to compare a simple approach with two distinct alternatives and help me choose a direction."
+        ]
+      }
+    }
+  }
+}
