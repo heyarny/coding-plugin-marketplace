@@ -1,10 +1,17 @@
 {
   "name": "mermaid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate Mermaid diagrams from user requirements. Supports 23+ diagram types including flowcharts, sequence diagrams, class diagrams, ER diagrams, Gantt charts, and more.",
   "author": {
     "name": "Arnold Stark"
   },
   "license": "MIT",
-  "keywords": ["mermaid", "diagrams", "documentation", "visualization", "flowchart", "sequence-diagram"]
+  "keywords": [
+    "mermaid",
+    "diagrams",
+    "documentation",
+    "visualization",
+    "flowchart",
+    "sequence-diagram"
+  ]
 }
